@@ -1,17 +1,23 @@
 public class MethodOverload {
     public static void main(String[] args) {
-        MethodOverload.overLoadCheck("James", "Carter");
-        MethodOverload.overLoadCheck("James", "Carter", "Dallas");
-        MethodOverloadV2.display();
-        MethodOverloadV2.overLoadCheck("Dane", "Cane");
-        MethodOverloadV2.overLoadCheck("Dane", "Cane", "Los Angeles");
+        MethodOverload.sayHi();
+        InnerClass.sayHi();
+        InnerofInnerClass.sayHi();
     }
 
-    public static void overLoadCheck(String fname, String lname) {
-        System.out.println(fname + lname);
+    private static void sayHi() {
+        System.out.println("hello from MethodOverload Class");
     }
 
-    public static void overLoadCheck(String fname, String lname, String location) {
-        System.out.println(fname + lname + location);
+    public static class InnerClass {
+        private static void sayHi() {
+            System.out.println("hello from InnerClass Class");
+        }
+    }
+
+    public static class InnerofInnerClass {
+        private static void sayHi() {
+            System.out.println("hello from Inner of Inner Class");
+        }
     }
 }
