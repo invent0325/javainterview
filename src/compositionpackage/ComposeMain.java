@@ -11,5 +11,8 @@ public class ComposeMain {
 
         Person per1 = new Person("Jill");
         Person per2 = new Person("Maya");
+
+        Elephant elephant = new Elephant();
+        System.out.println(elephant.getClass());
     }
 }
